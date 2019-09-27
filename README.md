@@ -1,6 +1,5 @@
 # Distributed Transactions with Subset Schema Design Pattern
 Distributed Transactions with Subset Schema Design Pattern
-![Demo](https://raw.githubusercontent.com/snarvaez/changestreams/master/demo_slide.png)
 
 Steps:
 1. Setup a MongoDB 4.2 Sharded Cluster
