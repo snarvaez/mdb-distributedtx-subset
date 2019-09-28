@@ -29,7 +29,7 @@ mongoimport --host YOURHOST --ssl --username YOURUSER --password YOURPWD --authe
 
 mongoimport --host YOURHOST --ssl --username YOURUSER --password YOURPWD --authenticationDatabase admin --db IMDB --collection movies_metadata --type JSON --file IMDB__movies_metadata.json
 
-mongoimport --host YOURHOST --ssl --username YOURUSER --password YOURPWD --authenticationDatabase admin --db IMDB_Cast --collection mcast_crew --type JSON --file IMDB_Cast__cast_crew.json
+mongoimport --host YOURHOST --ssl --username YOURUSER --password YOURPWD --authenticationDatabase admin --db IMDB_Cast --collection cast_crew --type JSON --file IMDB_Cast__cast_crew.json
 ```
 
 __5. Execute the script [SubsetPatternWithIMDB_DistTx.js](SubsetPatternWithIMDB_DistTx.js).__
