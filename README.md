@@ -20,7 +20,8 @@ sh.enableSharding("IMDB_Cast");
 sh.shardCollection("IMDB_Cast.cast_crew", { _id: 1 } );
 db.adminCommand({ movePrimary: "IMDB_Cast", to: "sh_1" });
 ```
-__3. Extract the [IMDB_data.zip](IMDB_data.zip) file, this contains the 'IMDB__movies_credits.json', 'IMDB__movies_metadata.json' and 'IMDB_Cast__cast_crew.json' files.__
+__3. Extract the [IMDB_data.zip](IMDB_data.zip) file__
+This contains the 'IMDB__movies_credits.json', 'IMDB__movies_metadata.json' and 'IMDB_Cast__cast_crew.json' files.__
 
 __4. Import the data to each database as follows:__
 ```
