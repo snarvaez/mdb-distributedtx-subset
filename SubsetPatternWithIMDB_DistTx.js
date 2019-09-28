@@ -18,11 +18,14 @@ db.adminCommand({ movePrimary: "IMDB_Cast", to: "sh_1" });
 sh.status();
 exit
 
-./mongorestore --host YOURHOST --port YOURPORT -u YOURUSER -p YOURPWD --authenticationDatabase admin --nsInclude 'IMDB.movies_*'
-./mongorestore --host YOURHOST --port YOURPORT -u YOURUSER -p YOURPWD --authenticationDatabase admin --nsInclude 'IMDB.cast_crew'  --nsFrom 'IMDB.cast_crew' --nsTo 'IMDB_Cast.cast_crew'
+mongoimport --host YOURHOST --ssl --username YOURUSER --password YOURPWD --authenticationDatabase admin --db IMDB --collection movies_credits --type JSON --file IMDB__movies_credits.json
+mongoimport --host YOURHOST --ssl --username YOURUSER --password YOURPWD --authenticationDatabase admin --db IMDB --collection movies_metadata --type JSON --file IMDB__movies_metadata.json
+mongoimport --host YOURHOST --ssl --username YOURUSER --password YOURPWD --authenticationDatabase admin --db IMDB_Cast --collection cast_crew --type JSON --file IMDB_Cast__cast_crew.json
 
-./mongo "mongodb://YOURHOST/IMDB" -u YOURUSER -p YOURPWD --authenticationDatabase admin
+// Connect to mongo using the shell and demonstrate that each DB lives in a different shard
 sh.status();
+exit
+
 // ==============================================
 */
 
