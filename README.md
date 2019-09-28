@@ -33,7 +33,7 @@ mongoimport --host YOURHOST --ssl --username YOURUSER --password YOURPWD --authe
 ```
 
 __5. Execute the script [SubsetPatternWithIMDB_DistTx.js](SubsetPatternWithIMDB_DistTx.js).__
-This will traverse the first 100 documents in the `IMDB.movies_credits` collection and populate the arrays `IMDB_Cast.cast_crew.roles` and `IMDB.movies_metadata.main_actors` arrays using a distributed transaction.
+This will traverse the first 100 documents in the `IMDB.movies_credits` collection and populate the `IMDB_Cast.cast_crew.roles` and `IMDB.movies_metadata.main_actors` arrays using a distributed transaction.
 
 __6. Proof:__
 The `IMDB_Cast.cast_crew` collection will have a `roles` array with a subset of the information of every movie the actress/actor as starred in. The `IMDB.movies_metadata` collection will have a `main_actors` array with a subset of the information of every actress/actor that starred in the movie.
