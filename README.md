@@ -3,7 +3,6 @@ Distributed Transactions with Subset Schema Design Pattern
 
 ![Patnter](SubsetPattern.jpg)
 
-Steps:
 __1. Setup a MongoDB 4.2 Sharded Cluster on MongoDB Atlas (2 shards is sufficient)__
 
 __2. Setup the IMDB and IMDB_Cast databases on Shard0 and Shard1 respectively as follows:__ 
